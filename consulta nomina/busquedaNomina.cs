@@ -46,5 +46,17 @@ namespace consulta_nomina
              }
              */
         }
+
+
+   
+
+        private void btncrear_Click(object sender, EventArgs e)
+        {
+
+            frmCrudNomina cn = new frmCrudNomina();
+          
+            cn.Show();
+        }
+
     }
 }

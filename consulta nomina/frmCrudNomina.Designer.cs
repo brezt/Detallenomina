@@ -34,9 +34,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnGenerarNomina = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtHasta = new System.Windows.Forms.DateTimePicker();
+            this.txtDesde = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnGenerarNomina = new System.Windows.Forms.Button();
             this.dgvDetalleNomina = new System.Windows.Forms.DataGridView();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
@@ -45,10 +47,9 @@
             this.txtTotalNomina = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.btnCrear = new System.Windows.Forms.Button();
             this.txtNumeroNomina = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleNomina)).BeginInit();
             this.SuspendLayout();
@@ -62,26 +63,29 @@
             "Mensual",
             "Doble Sueldo",
             "Incentivo"});
-            this.cmbTipo.Location = new System.Drawing.Point(70, 31);
+            this.cmbTipo.Location = new System.Drawing.Point(52, 25);
+            this.cmbTipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(121, 24);
+            this.cmbTipo.Size = new System.Drawing.Size(92, 21);
             this.cmbTipo.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 31);
+            this.label1.Location = new System.Drawing.Point(21, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 17);
+            this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tipo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(245, 34);
+            this.label2.Location = new System.Drawing.Point(184, 28);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
+            this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Status";
             // 
@@ -91,76 +95,105 @@
             this.cmbStatus.Items.AddRange(new object[] {
             "Proceso",
             "Cerrada"});
-            this.cmbStatus.Location = new System.Drawing.Point(308, 28);
+            this.cmbStatus.Location = new System.Drawing.Point(231, 23);
+            this.cmbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(121, 24);
+            this.cmbStatus.Size = new System.Drawing.Size(92, 21);
             this.cmbStatus.TabIndex = 2;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.txtHasta);
+            this.groupBox1.Controls.Add(this.txtDesde);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(474, 12);
+            this.groupBox1.Location = new System.Drawing.Point(356, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(394, 73);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(296, 59);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fecha";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // txtHasta
+            // 
+            this.txtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtHasta.Location = new System.Drawing.Point(189, 16);
+            this.txtHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHasta.Name = "txtHasta";
+            this.txtHasta.Size = new System.Drawing.Size(81, 20);
+            this.txtHasta.TabIndex = 3;
+            this.txtHasta.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // txtDesde
+            // 
+            this.txtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtDesde.Location = new System.Drawing.Point(56, 16);
+            this.txtDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDesde.Name = "txtDesde";
+            this.txtDesde.Size = new System.Drawing.Size(81, 20);
+            this.txtDesde.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(151, 18);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Hasta";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 18);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Desde";
+            // 
             // btnGenerarNomina
             // 
-            this.btnGenerarNomina.Location = new System.Drawing.Point(916, 25);
+            this.btnGenerarNomina.Location = new System.Drawing.Point(687, 20);
+            this.btnGenerarNomina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGenerarNomina.Name = "btnGenerarNomina";
-            this.btnGenerarNomina.Size = new System.Drawing.Size(146, 23);
+            this.btnGenerarNomina.Size = new System.Drawing.Size(110, 19);
             this.btnGenerarNomina.TabIndex = 0;
             this.btnGenerarNomina.Text = "Generar Nómina";
             this.btnGenerarNomina.UseVisualStyleBackColor = true;
             this.btnGenerarNomina.Click += new System.EventHandler(this.btnGenerarNomina_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Desde";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(201, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 17);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Hasta";
-            // 
             // dgvDetalleNomina
             // 
             this.dgvDetalleNomina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalleNomina.Location = new System.Drawing.Point(31, 119);
+            this.dgvDetalleNomina.Location = new System.Drawing.Point(23, 97);
+            this.dgvDetalleNomina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDetalleNomina.Name = "dgvDetalleNomina";
             this.dgvDetalleNomina.RowTemplate.Height = 24;
-            this.dgvDetalleNomina.Size = new System.Drawing.Size(1064, 314);
+            this.dgvDetalleNomina.Size = new System.Drawing.Size(798, 255);
             this.dgvDetalleNomina.TabIndex = 6;
+            this.dgvDetalleNomina.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleNomina_CellContentClick);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(175, 460);
+            this.btnGuardar.Location = new System.Drawing.Point(131, 374);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(147, 56);
+            this.btnGuardar.Size = new System.Drawing.Size(110, 46);
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(342, 460);
+            this.btnBorrar.Location = new System.Drawing.Point(256, 374);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(147, 56);
+            this.btnBorrar.Size = new System.Drawing.Size(110, 46);
             this.btnBorrar.TabIndex = 9;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
@@ -168,34 +201,38 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(521, 477);
+            this.label5.Location = new System.Drawing.Point(391, 388);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 17);
+            this.label5.Size = new System.Drawing.Size(97, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Total Deducciones";
             // 
             // txtTotalDeducciones
             // 
-            this.txtTotalDeducciones.Location = new System.Drawing.Point(662, 477);
+            this.txtTotalDeducciones.Location = new System.Drawing.Point(496, 388);
+            this.txtTotalDeducciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTotalDeducciones.Name = "txtTotalDeducciones";
-            this.txtTotalDeducciones.Size = new System.Drawing.Size(146, 22);
+            this.txtTotalDeducciones.Size = new System.Drawing.Size(110, 20);
             this.txtTotalDeducciones.TabIndex = 10;
             this.txtTotalDeducciones.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtTotalNomina
             // 
-            this.txtTotalNomina.Location = new System.Drawing.Point(932, 477);
+            this.txtTotalNomina.Location = new System.Drawing.Point(699, 388);
+            this.txtTotalNomina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTotalNomina.Name = "txtTotalNomina";
-            this.txtTotalNomina.Size = new System.Drawing.Size(146, 22);
+            this.txtTotalNomina.Size = new System.Drawing.Size(110, 20);
             this.txtTotalNomina.TabIndex = 12;
             this.txtTotalNomina.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(834, 477);
+            this.label6.Location = new System.Drawing.Point(626, 388);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 17);
+            this.label6.Size = new System.Drawing.Size(70, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Total Nomina";
             // 
@@ -203,28 +240,13 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(75, 20);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(107, 22);
-            this.dateTimePicker1.TabIndex = 2;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(252, 20);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(107, 22);
-            this.dateTimePicker2.TabIndex = 3;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
-            // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(12, 460);
+            this.btnCrear.Enabled = false;
+            this.btnCrear.Location = new System.Drawing.Point(9, 374);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(147, 56);
+            this.btnCrear.Size = new System.Drawing.Size(110, 46);
             this.btnCrear.TabIndex = 13;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
@@ -232,17 +254,27 @@
             // 
             // txtNumeroNomina
             // 
-            this.txtNumeroNomina.Location = new System.Drawing.Point(31, 91);
+            this.txtNumeroNomina.Location = new System.Drawing.Point(123, 73);
+            this.txtNumeroNomina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNumeroNomina.Name = "txtNumeroNomina";
-            this.txtNumeroNomina.ReadOnly = true;
-            this.txtNumeroNomina.Size = new System.Drawing.Size(63, 22);
+            this.txtNumeroNomina.Size = new System.Drawing.Size(48, 20);
             this.txtNumeroNomina.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 73);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Número de Nómina";
             // 
             // frmCrudNomina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 555);
+            this.ClientSize = new System.Drawing.Size(864, 451);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNumeroNomina);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.txtTotalNomina);
@@ -258,6 +290,7 @@
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbTipo);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCrudNomina";
             this.Text = "frmCrudNomina";
             this.Load += new System.EventHandler(this.frmCrudNomina_Load);
@@ -287,9 +320,10 @@
         private System.Windows.Forms.TextBox txtTotalNomina;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker txtHasta;
+        private System.Windows.Forms.DateTimePicker txtDesde;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.TextBox txtNumeroNomina;
+        private System.Windows.Forms.Label label7;
     }
 }

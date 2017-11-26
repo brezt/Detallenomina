@@ -24,7 +24,7 @@ namespace consulta_nomina
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            btnCrear.Enabled = true;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -54,42 +54,127 @@ namespace consulta_nomina
 
         private void btnGenerarNomina_Click(object sender, EventArgs e)
         {
+            
             cargarDatos();
+            calculos();
         }
         public void cargarDatos()
         {
             Operaciones op = new Operaciones();
-           dgvDetalleNomina.DataSource = op.ConsultaConResultado("select empleados.idempleado, empleados.nombreempleado, empleados.apellidoempleado, empleados.sueldoempleado, empleados.cedulaempleado, cargo.descricargo, (empleados.sueldoempleado*0.12) ISR, (empleados.sueldoempleado*0.4) SS, (empleados.sueldoempleado*0.02) Ahorros, ((empleados.sueldoempleado*0.012)+(empleados.sueldoempleado*0.012)+(empleados.sueldoempleado*0.04)+(empleados.sueldoempleado*0.02)) 'Total Deducc', ((empleados.sueldoempleado)-((empleados.sueldoempleado*0.12)+(empleados.sueldoempleado*0.04)+(empleados.sueldoempleado*0.02))) 'Sueldo Neto' from empleados inner join cargo on empleados.idcargo=cargo.idcargo");
+            dgvDetalleNomina.DataSource = op.ConsultaConResultado("select empleados.idempleado, empleados.nombreempleado, empleados.apellidoempleado, empleados.sueldoempleado, empleados.cedulaempleado, cargo.descricargo, (empleados.sueldoempleado*0.12) ISR, (empleados.sueldoempleado*0.4) SS, (empleados.sueldoempleado*0.02) Ahorros, ((empleados.sueldoempleado*0.012)+(empleados.sueldoempleado*0.012)+(empleados.sueldoempleado*0.04)+(empleados.sueldoempleado*0.02)) 'Total Deducc', ((empleados.sueldoempleado)-((empleados.sueldoempleado*0.12)+(empleados.sueldoempleado*0.04)+(empleados.sueldoempleado*0.02))) 'Sueldo Neto' from empleados inner join cargo on empleados.idcargo=cargo.idcargo");
 
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            for (int a = 0; a < dgvDetalleNomina.Rows.Count; a++)
+
+            busquedaNomina bn = new busquedaNomina();
+            generaNomina();
+
+            
+
+
+        }
+        public void calculos()
+        {
+                float totalDeducciones = 0;
+                float totalNomina = 0;
+                 float isrTotal = 0;
+            float ssTotal = 0;
+            float otrosTotal = 0;
+           
+            
+
+            for (int a = 0; a < dgvDetalleNomina.Rows.Count - 1; a++)
             {
-                float isr = 0;
-                float ss=0; 
-                float otros = 0;
-                float neto=0;
-                float sueldo=0;
-                int idEmpleado=0;
-                isr = float.Parse(dgvDetalleNomina.Rows[a].Cells["ISR"].Value.ToString());
-                ss = float.Parse(dgvDetalleNomina.Rows[a].Cells["SS"].Value.ToString());
-                otros= float.Parse(dgvDetalleNomina.Rows[a].Cells["Ahorros"].Value.ToString());
-                sueldo = float.Parse(dgvDetalleNomina.Rows[a].Cells["sueldoempleado"].Value.ToString());
-                idEmpleado= Convert.ToInt32(dgvDetalleNomina.Rows[a].Cells["idempleado"].Value.ToString());
-                neto =  float.Parse(dgvDetalleNomina.Rows[a].Cells["Sueldo Neto"].Value.ToString());
 
+                totalDeducciones += float.Parse(dgvDetalleNomina.Rows[a].Cells["Total Deducc"].Value.ToString());
+                totalNomina += float.Parse(dgvDetalleNomina.Rows[a].Cells["sueldoempleado"].Value.ToString());
+                isrTotal+= float.Parse(dgvDetalleNomina.Rows[a].Cells["ISR"].Value.ToString());
+                ssTotal+= float.Parse(dgvDetalleNomina.Rows[a].Cells["SS"].Value.ToString());
+                otrosTotal+= float.Parse(dgvDetalleNomina.Rows[a].Cells["Ahorros"].Value.ToString());
+               
 
+            }
+            Operaciones op = new Operaciones();
+           op.ConsultasSinResultados("insert into cabecera_nomina (codigonomina, fechainicio, fechafin, sueldototal, isrtotal, sstotal, otrosdescuentos, deduciontotal, netotal, nominafecha, status, tipo) values ('"+txtNumeroNomina.Text+"', '"+txtDesde.Text+"', '"+txtHasta.Text+"', '"+txtTotalNomina.Text+"', '"+isrTotal+"', '"+ssTotal+"', '"+otrosTotal+"','"+txtTotalDeducciones.Text+"', '"+neto+"','10/11/2013', '"+cmbStatus.Text+"', '"+cmbTipo.Text+"')");
 
+            txtTotalDeducciones.Text = totalDeducciones.ToString();
+            txtTotalNomina.Text = totalNomina.ToString();
+        }
 
-                Operaciones op = new Operaciones();
-                op.ConsultasSinResultados("insert into Detalle_nomina (idempledo, sueldoempleado, isr, ss, otrosdescuentos, neto) values( '"+idEmpleado+"','"+sueldo+"', '"+isr+"', '"+ss+"', '"+otros+"', '"+neto+"')");
+        public bool valida()
+        {
+
+            if (cmbTipo.Text == "".Trim())
+            {
+                MessageBox.Show("POR FAVOR SELECCIONE EL TIPO DE NOMINA");
+
+                return false;
+            }
+
+            if (cmbStatus.Text == "".Trim())
+            {
+                MessageBox.Show("POR FAVOR SELECCIONE EL STATUS");
                 
+                return false;
+            }
+
+           
+
+            if (txtNumeroNomina.Text == "".Trim())
+            {
+                MessageBox.Show("POR FAVOR ESCRIBA EL NUMERO DE NOMINA");
+                txtNumeroNomina.Focus();
+                return false;
+            }
+
+            return true;
+        }
+
+
+     public float isr = 0;
+        public float ss = 0;
+        public float otros = 0;
+        public float neto = 0;
+        public float sueldo = 0;
+        public  int idEmpleado = 0;
+        public int numeroNomina = 0;
+
+        public void generaNomina()
+        {
+
+            Operaciones op = new Operaciones();
+
+            if (valida())
+            {
+                for (int a = 0; a < dgvDetalleNomina.Rows.Count - 1; a++)
+                {
+
+                    idEmpleado = Convert.ToInt32(dgvDetalleNomina.Rows[a].Cells["idempleado"].Value.ToString());
+                    isr = float.Parse(dgvDetalleNomina.Rows[a].Cells["ISR"].Value.ToString());
+                    ss = float.Parse(dgvDetalleNomina.Rows[a].Cells["SS"].Value.ToString());
+                    otros = float.Parse(dgvDetalleNomina.Rows[a].Cells["Ahorros"].Value.ToString());
+                    sueldo = float.Parse(dgvDetalleNomina.Rows[a].Cells["sueldoempleado"].Value.ToString());
+                    neto = float.Parse(dgvDetalleNomina.Rows[a].Cells["Sueldo Neto"].Value.ToString());
+                    numeroNomina = Convert.ToInt16(txtNumeroNomina.Text);
+
+                    op.ConsultasSinResultados("insert into Detalle_nomina (codnomina, idempledo, sueldoempleado, isr, ss, otrosdescuentos, neto) values( '" + numeroNomina + "','" + idEmpleado + "','" + sueldo + "', '" + isr + "', '" + ss + "', '" + otros + "', '" + neto + "')");
+
+
+                }
+                MessageBox.Show("Nomina Guardada");
+                this.Close();
 
 
             }
-            MessageBox.Show("DATOS GUARDADOS");
         }
+
+        private void dgvDetalleNomina_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
     }
 }
