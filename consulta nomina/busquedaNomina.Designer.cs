@@ -32,9 +32,14 @@
             this.btnimprimir = new System.Windows.Forms.Button();
             this.bntBuscar = new System.Windows.Forms.Button();
             this.txtbuscar = new System.Windows.Forms.TextBox();
-            this.rbtncedula = new System.Windows.Forms.RadioButton();
-            this.rbtnapellido = new System.Windows.Forms.RadioButton();
-            this.rbtnid = new System.Windows.Forms.RadioButton();
+            this.rbtnStatus = new System.Windows.Forms.RadioButton();
+            this.rbtnNumero = new System.Windows.Forms.RadioButton();
+            this.tbtnFecha = new System.Windows.Forms.RadioButton();
+            this.dgvNomina = new System.Windows.Forms.DataGridView();
+            this.dgvDetalleNomina = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNomina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleNomina)).BeginInit();
             this.SuspendLayout();
             // 
             // btncrear
@@ -66,6 +71,7 @@
             this.bntBuscar.TabIndex = 13;
             this.bntBuscar.Text = "Buscar";
             this.bntBuscar.UseVisualStyleBackColor = true;
+            this.bntBuscar.Click += new System.EventHandler(this.bntBuscar_Click);
             // 
             // txtbuscar
             // 
@@ -75,57 +81,90 @@
             this.txtbuscar.Size = new System.Drawing.Size(409, 22);
             this.txtbuscar.TabIndex = 12;
             // 
-            // rbtncedula
+            // rbtnStatus
             // 
-            this.rbtncedula.AutoSize = true;
-            this.rbtncedula.Location = new System.Drawing.Point(300, 33);
-            this.rbtncedula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbtncedula.Name = "rbtncedula";
-            this.rbtncedula.Size = new System.Drawing.Size(73, 21);
-            this.rbtncedula.TabIndex = 11;
-            this.rbtncedula.TabStop = true;
-            this.rbtncedula.Text = "Cédula";
-            this.rbtncedula.UseVisualStyleBackColor = true;
+            this.rbtnStatus.AutoSize = true;
+            this.rbtnStatus.Location = new System.Drawing.Point(300, 33);
+            this.rbtnStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnStatus.Name = "rbtnStatus";
+            this.rbtnStatus.Size = new System.Drawing.Size(69, 21);
+            this.rbtnStatus.TabIndex = 11;
+            this.rbtnStatus.TabStop = true;
+            this.rbtnStatus.Text = "Status";
+            this.rbtnStatus.UseVisualStyleBackColor = true;
             // 
-            // rbtnapellido
+            // rbtnNumero
             // 
-            this.rbtnapellido.AutoSize = true;
-            this.rbtnapellido.Location = new System.Drawing.Point(193, 33);
-            this.rbtnapellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbtnapellido.Name = "rbtnapellido";
-            this.rbtnapellido.Size = new System.Drawing.Size(79, 21);
-            this.rbtnapellido.TabIndex = 10;
-            this.rbtnapellido.TabStop = true;
-            this.rbtnapellido.Text = "Apellido";
-            this.rbtnapellido.UseVisualStyleBackColor = true;
+            this.rbtnNumero.AutoSize = true;
+            this.rbtnNumero.Location = new System.Drawing.Point(193, 33);
+            this.rbtnNumero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnNumero.Name = "rbtnNumero";
+            this.rbtnNumero.Size = new System.Drawing.Size(77, 21);
+            this.rbtnNumero.TabIndex = 10;
+            this.rbtnNumero.TabStop = true;
+            this.rbtnNumero.Text = "numero";
+            this.rbtnNumero.UseVisualStyleBackColor = true;
             // 
-            // rbtnid
+            // tbtnFecha
             // 
-            this.rbtnid.AutoSize = true;
-            this.rbtnid.Location = new System.Drawing.Point(80, 34);
-            this.rbtnid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbtnid.Name = "rbtnid";
-            this.rbtnid.Size = new System.Drawing.Size(68, 21);
-            this.rbtnid.TabIndex = 8;
-            this.rbtnid.TabStop = true;
-            this.rbtnid.Text = "Fecha";
-            this.rbtnid.UseVisualStyleBackColor = true;
+            this.tbtnFecha.AutoSize = true;
+            this.tbtnFecha.Location = new System.Drawing.Point(80, 34);
+            this.tbtnFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbtnFecha.Name = "tbtnFecha";
+            this.tbtnFecha.Size = new System.Drawing.Size(68, 21);
+            this.tbtnFecha.TabIndex = 8;
+            this.tbtnFecha.TabStop = true;
+            this.tbtnFecha.Text = "Fecha";
+            this.tbtnFecha.UseVisualStyleBackColor = true;
+            // 
+            // dgvNomina
+            // 
+            this.dgvNomina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNomina.Location = new System.Drawing.Point(32, 101);
+            this.dgvNomina.Name = "dgvNomina";
+            this.dgvNomina.RowTemplate.Height = 24;
+            this.dgvNomina.Size = new System.Drawing.Size(1197, 195);
+            this.dgvNomina.TabIndex = 16;
+            // 
+            // dgvDetalleNomina
+            // 
+            this.dgvDetalleNomina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalleNomina.Location = new System.Drawing.Point(32, 336);
+            this.dgvDetalleNomina.Name = "dgvDetalleNomina";
+            this.dgvDetalleNomina.RowTemplate.Height = 24;
+            this.dgvDetalleNomina.Size = new System.Drawing.Size(1197, 195);
+            this.dgvDetalleNomina.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(447, 316);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(216, 17);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Maestro Nomina -Detalle Nomina";
             // 
             // busquedaNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1273, 630);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvDetalleNomina);
+            this.Controls.Add(this.dgvNomina);
             this.Controls.Add(this.btncrear);
             this.Controls.Add(this.btnimprimir);
             this.Controls.Add(this.bntBuscar);
             this.Controls.Add(this.txtbuscar);
-            this.Controls.Add(this.rbtncedula);
-            this.Controls.Add(this.rbtnapellido);
-            this.Controls.Add(this.rbtnid);
+            this.Controls.Add(this.rbtnStatus);
+            this.Controls.Add(this.rbtnNumero);
+            this.Controls.Add(this.tbtnFecha);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "busquedaNomina";
             this.Text = "busquedaNomina";
+            this.Load += new System.EventHandler(this.busquedaNomina_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNomina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleNomina)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,8 +176,11 @@
         private System.Windows.Forms.Button btnimprimir;
         private System.Windows.Forms.Button bntBuscar;
         private System.Windows.Forms.TextBox txtbuscar;
-        private System.Windows.Forms.RadioButton rbtncedula;
-        private System.Windows.Forms.RadioButton rbtnapellido;
-        private System.Windows.Forms.RadioButton rbtnid;
+        private System.Windows.Forms.RadioButton rbtnStatus;
+        private System.Windows.Forms.RadioButton rbtnNumero;
+        private System.Windows.Forms.RadioButton tbtnFecha;
+        private System.Windows.Forms.DataGridView dgvNomina;
+        private System.Windows.Forms.DataGridView dgvDetalleNomina;
+        private System.Windows.Forms.Label label1;
     }
 }

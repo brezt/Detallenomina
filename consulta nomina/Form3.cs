@@ -45,5 +45,17 @@ namespace consulta_nomina
             frmCargo ca = new frmCargo();
             ca.Show();
         }
+
+        private void noToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            busquedaNomina bn = new busquedaNomina();
+            bn.Show();
+        }
+
+        private void nominaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCrudNomina cn = new frmCrudNomina();
+            cn.Show();
+        }
     }
 }
