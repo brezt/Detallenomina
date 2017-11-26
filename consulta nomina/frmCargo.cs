@@ -72,5 +72,15 @@ namespace consulta_nomina
                 txtdescriccion.Text = "";
             }
         }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtdescriccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

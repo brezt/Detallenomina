@@ -57,5 +57,24 @@ namespace consulta_nomina
             frmCrudNomina cn = new frmCrudNomina();
             cn.Show();
         }
+
+        private void departamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDepartamento dp = new frmDepartamento();
+            dp.Show();
+
+        }
+
+        private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmbusquedadepartamento bd = new frmbusquedadepartamento();
+            bd.Show();
+        }
+
+        private void departamentoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmbusquedadepartamento bd = new frmbusquedadepartamento();
+            bd.Show();
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmbusquedaempleado));
             this.rbtnid = new System.Windows.Forms.RadioButton();
             this.rbtnnombre = new System.Windows.Forms.RadioButton();
             this.rbtnapellido = new System.Windows.Forms.RadioButton();
@@ -94,37 +95,47 @@
             // 
             // bntBuscar
             // 
-            this.bntBuscar.Location = new System.Drawing.Point(863, 38);
+            this.bntBuscar.Image = ((System.Drawing.Image)(resources.GetObject("bntBuscar.Image")));
+            this.bntBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntBuscar.Location = new System.Drawing.Point(850, 38);
             this.bntBuscar.Name = "bntBuscar";
-            this.bntBuscar.Size = new System.Drawing.Size(97, 66);
+            this.bntBuscar.Size = new System.Drawing.Size(125, 66);
             this.bntBuscar.TabIndex = 5;
             this.bntBuscar.Text = "Buscar";
+            this.bntBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bntBuscar.UseVisualStyleBackColor = true;
             this.bntBuscar.Click += new System.EventHandler(this.bntBuscar_Click);
             // 
             // btnimprimir
             // 
-            this.btnimprimir.Location = new System.Drawing.Point(990, 38);
+            this.btnimprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnimprimir.Image")));
+            this.btnimprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnimprimir.Location = new System.Drawing.Point(1101, 38);
             this.btnimprimir.Name = "btnimprimir";
-            this.btnimprimir.Size = new System.Drawing.Size(71, 66);
+            this.btnimprimir.Size = new System.Drawing.Size(123, 66);
             this.btnimprimir.TabIndex = 6;
             this.btnimprimir.Text = "Imprimir";
+            this.btnimprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnimprimir.UseVisualStyleBackColor = true;
             // 
             // btncrear
             // 
-            this.btncrear.Location = new System.Drawing.Point(1090, 37);
+            this.btncrear.Image = ((System.Drawing.Image)(resources.GetObject("btncrear.Image")));
+            this.btncrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncrear.Location = new System.Drawing.Point(981, 38);
             this.btncrear.Name = "btncrear";
-            this.btncrear.Size = new System.Drawing.Size(71, 66);
+            this.btncrear.Size = new System.Drawing.Size(114, 66);
             this.btncrear.TabIndex = 7;
             this.btncrear.Text = "Crear";
+            this.btncrear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btncrear.UseVisualStyleBackColor = true;
             this.btncrear.Click += new System.EventHandler(this.btncrear_Click);
             // 
             // dgvempleado
             // 
+            this.dgvempleado.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvempleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvempleado.Location = new System.Drawing.Point(12, 169);
+            this.dgvempleado.Location = new System.Drawing.Point(53, 110);
             this.dgvempleado.Name = "dgvempleado";
             this.dgvempleado.RowTemplate.Height = 24;
             this.dgvempleado.Size = new System.Drawing.Size(1171, 431);
@@ -137,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1195, 612);
+            this.ClientSize = new System.Drawing.Size(1236, 612);
             this.Controls.Add(this.dgvempleado);
             this.Controls.Add(this.btncrear);
             this.Controls.Add(this.btnimprimir);

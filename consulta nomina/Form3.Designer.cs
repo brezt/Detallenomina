@@ -38,6 +38,8 @@
             this.cargoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.nominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +65,9 @@
             this.buscarNominaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buscarNominaToolStripMenuItem1,
             this.cargoToolStripMenuItem,
+            this.departamentoToolStripMenuItem,
             this.noToolStripMenuItem});
+            this.buscarNominaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buscarNominaToolStripMenuItem.Name = "buscarNominaToolStripMenuItem";
             this.buscarNominaToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.buscarNominaToolStripMenuItem.Text = "Buscar ";
@@ -71,21 +75,21 @@
             // buscarNominaToolStripMenuItem1
             // 
             this.buscarNominaToolStripMenuItem1.Name = "buscarNominaToolStripMenuItem1";
-            this.buscarNominaToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.buscarNominaToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
             this.buscarNominaToolStripMenuItem1.Text = "Empleado";
             this.buscarNominaToolStripMenuItem1.Click += new System.EventHandler(this.buscarNominaToolStripMenuItem1_Click);
             // 
             // cargoToolStripMenuItem
             // 
             this.cargoToolStripMenuItem.Name = "cargoToolStripMenuItem";
-            this.cargoToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.cargoToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.cargoToolStripMenuItem.Text = "Cargo";
             this.cargoToolStripMenuItem.Click += new System.EventHandler(this.cargoToolStripMenuItem_Click);
             // 
             // noToolStripMenuItem
             // 
             this.noToolStripMenuItem.Name = "noToolStripMenuItem";
-            this.noToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.noToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.noToolStripMenuItem.Text = "Nomina";
             this.noToolStripMenuItem.Click += new System.EventHandler(this.noToolStripMenuItem_Click);
             // 
@@ -94,6 +98,7 @@
             this.empleadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearEmpleadoToolStripMenuItem,
             this.cargoToolStripMenuItem1,
+            this.departamentosToolStripMenuItem,
             this.nominaToolStripMenuItem});
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
             this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
@@ -102,22 +107,22 @@
             // crearEmpleadoToolStripMenuItem
             // 
             this.crearEmpleadoToolStripMenuItem.Name = "crearEmpleadoToolStripMenuItem";
-            this.crearEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.crearEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.crearEmpleadoToolStripMenuItem.Text = "Empleados";
             this.crearEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.crearEmpleadoToolStripMenuItem_Click);
             // 
             // cargoToolStripMenuItem1
             // 
             this.cargoToolStripMenuItem1.Name = "cargoToolStripMenuItem1";
-            this.cargoToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
-            this.cargoToolStripMenuItem1.Text = "Cargo";
+            this.cargoToolStripMenuItem1.Size = new System.Drawing.Size(187, 26);
+            this.cargoToolStripMenuItem1.Text = "Cargos";
             this.cargoToolStripMenuItem1.Click += new System.EventHandler(this.cargoToolStripMenuItem1_Click);
             // 
             // nominaToolStripMenuItem
             // 
             this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
-            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.nominaToolStripMenuItem.Text = "Nomina";
+            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.nominaToolStripMenuItem.Text = "Nominas";
             this.nominaToolStripMenuItem.Click += new System.EventHandler(this.nominaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
@@ -127,11 +132,25 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // departamentosToolStripMenuItem
+            // 
+            this.departamentosToolStripMenuItem.Name = "departamentosToolStripMenuItem";
+            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.departamentosToolStripMenuItem.Text = "Departamentos";
+            this.departamentosToolStripMenuItem.Click += new System.EventHandler(this.departamentosToolStripMenuItem_Click);
+            // 
+            // departamentoToolStripMenuItem
+            // 
+            this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.departamentoToolStripMenuItem.Text = "Departamento";
+            this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click_1);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::consulta_nomina.Properties.Resources._1504233758_2;
-            this.pictureBox1.Location = new System.Drawing.Point(329, 251);
+            this.pictureBox1.Location = new System.Drawing.Point(268, 216);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(445, 148);
@@ -173,5 +192,7 @@
         private System.Windows.Forms.ToolStripMenuItem cargoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem noToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem departamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem departamentoToolStripMenuItem;
     }
 }

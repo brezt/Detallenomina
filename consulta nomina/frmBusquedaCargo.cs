@@ -74,5 +74,20 @@ namespace consulta_nomina
         {
 
         }
+
+        private void rbtnId_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnCargo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnimprimir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
