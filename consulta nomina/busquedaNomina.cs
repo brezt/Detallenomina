@@ -83,10 +83,41 @@ namespace consulta_nomina
 
         private void dgvNomina_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmCrudNomina cn = new frmCrudNomina();
-            DataGridViewRow rellenar = dgvDetalleNomina.Rows[e.RowIndex];
 
-            re
+            DataGridViewRow rellenar = dgvNomina.Rows[e.RowIndex];
+            frmCrudNomina cn = new frmCrudNomina();
+            string status= rellenar.Cells["status"].Value.ToString();
+            if (status == "Cerrada")
+            {
+                cn.txtNumeroNomina.Enabled = false;
+                cn.btnBorrar.Enabled = false;
+                cn.btnGenerarNomina.Enabled = false;
+                cn.btnGuardar.Enabled = false;
+                cn.txtDesde.Enabled = false;
+                cn.txtHasta.Enabled = false;
+                cn.cmbStatus.Enabled = false;
+                cn.cmbTipo.Enabled = false;
+                cn.btnCrear.Enabled = false;
+                cn.cargarDatos();// para que llene el data grid que esta en el formulario crud de la nomina
+                cn.calculos(); //para que haga los calculos de la nomina y lo entre a los textbox
+
+
+                cn.Show();
+            }
+            else
+            {
+              
+
+                cn.cmbStatus.Text = status;
+                cn.cmbTipo.Text = rellenar.Cells["tipo"].Value.ToString();
+                cn.txtDesde.Text = rellenar.Cells["fechainicio"].Value.ToString();
+                cn.txtHasta.Text = rellenar.Cells["fechafin"].Value.ToString();
+                cn.txtNumeroNomina.Text = rellenar.Cells["codigonomina"].Value.ToString();
+                cn.cargarDatos();// para que llene el data grid que esta en el formulario crud de la nomina
+                cn.calculos(); //para que haga los calculos de la nomina y lo entre a los textbox
+
+                cn.Show();
+            }
         }
     }
 }

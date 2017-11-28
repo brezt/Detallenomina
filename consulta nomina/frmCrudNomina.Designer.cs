@@ -209,6 +209,7 @@
             this.txtTotalDeducciones.Location = new System.Drawing.Point(661, 478);
             this.txtTotalDeducciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotalDeducciones.Name = "txtTotalDeducciones";
+            this.txtTotalDeducciones.ReadOnly = true;
             this.txtTotalDeducciones.Size = new System.Drawing.Size(145, 22);
             this.txtTotalDeducciones.TabIndex = 10;
             this.txtTotalDeducciones.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -218,6 +219,7 @@
             this.txtTotalNomina.Location = new System.Drawing.Point(932, 478);
             this.txtTotalNomina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotalNomina.Name = "txtTotalNomina";
+            this.txtTotalNomina.ReadOnly = true;
             this.txtTotalNomina.Size = new System.Drawing.Size(145, 22);
             this.txtTotalNomina.TabIndex = 12;
             this.txtTotalNomina.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -299,7 +301,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvDetalleNomina;
         private System.Windows.Forms.Label label5;
@@ -307,8 +308,6 @@
         private System.Windows.Forms.TextBox txtTotalNomina;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.DateTimePicker txtHasta;
-        private System.Windows.Forms.DateTimePicker txtDesde;
         public System.Windows.Forms.ComboBox cmbTipo;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label label2;
@@ -320,5 +319,8 @@
         public System.Windows.Forms.Button btnCrear;
         public System.Windows.Forms.TextBox txtNumeroNomina;
         public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.DateTimePicker txtHasta;
+        public System.Windows.Forms.DateTimePicker txtDesde;
     }
 }
