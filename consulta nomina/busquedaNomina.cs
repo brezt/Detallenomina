@@ -60,7 +60,7 @@ namespace consulta_nomina
 
         private void dgvNomina_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //dgvDetalleNomina no = new dgvDetalleNomina();
+            
 
         }
 
@@ -79,6 +79,14 @@ namespace consulta_nomina
             dgvDetalleNomina.DataSource = op.ConsultaConResultado("select detalle_nomina.codnomina, empleados.nombreempleado, detalle_nomina.sueldoempleado, detalle_nomina.isr, detalle_nomina.ss, detalle_nomina.otrosdescuentos, detalle_nomina.neto from detalle_nomina inner join cabecera_nomina on detalle_nomina.codnomina = cabecera_nomina.codigonomina  inner join empleados on empleados.idempleado = detalle_nomina.idempledo");
 
          
+        }
+
+        private void dgvNomina_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmCrudNomina cn = new frmCrudNomina();
+            DataGridViewRow rellenar = dgvDetalleNomina.Rows[e.RowIndex];
+
+            re
         }
     }
 }

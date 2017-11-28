@@ -137,6 +137,7 @@
             this.dgvNomina.Size = new System.Drawing.Size(1197, 194);
             this.dgvNomina.TabIndex = 16;
             this.dgvNomina.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNomina_CellClick);
+            this.dgvNomina.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNomina_CellContentClick);
             this.dgvNomina.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNomina_CellDoubleClick);
             // 
             // dgvDetalleNomina

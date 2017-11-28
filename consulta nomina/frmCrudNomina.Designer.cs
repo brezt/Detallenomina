@@ -299,18 +299,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cmbTipo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbStatus;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnGenerarNomina;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvDetalleNomina;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTotalDeducciones;
         private System.Windows.Forms.TextBox txtTotalNomina;
@@ -318,8 +309,16 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DateTimePicker txtHasta;
         private System.Windows.Forms.DateTimePicker txtDesde;
-        private System.Windows.Forms.Button btnCrear;
-        private System.Windows.Forms.TextBox txtNumeroNomina;
-        private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.ComboBox cmbTipo;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.ComboBox cmbStatus;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.Button btnGenerarNomina;
+        public System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.Button btnBorrar;
+        public System.Windows.Forms.Button btnCrear;
+        public System.Windows.Forms.TextBox txtNumeroNomina;
+        public System.Windows.Forms.Label label7;
     }
 }
