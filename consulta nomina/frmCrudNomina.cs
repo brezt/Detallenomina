@@ -175,6 +175,9 @@ namespace consulta_nomina
 
         }
 
+        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
