@@ -136,6 +136,8 @@
             this.dgvNomina.RowTemplate.Height = 24;
             this.dgvNomina.Size = new System.Drawing.Size(1197, 194);
             this.dgvNomina.TabIndex = 16;
+            this.dgvNomina.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNomina_CellClick);
+            this.dgvNomina.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNomina_CellDoubleClick);
             // 
             // dgvDetalleNomina
             // 
@@ -146,6 +148,7 @@
             this.dgvDetalleNomina.RowTemplate.Height = 24;
             this.dgvDetalleNomina.Size = new System.Drawing.Size(1197, 194);
             this.dgvDetalleNomina.TabIndex = 17;
+            this.dgvDetalleNomina.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleNomina_CellContentClick);
             // 
             // label1
             // 
@@ -171,7 +174,7 @@
             this.Controls.Add(this.rbtnStatus);
             this.Controls.Add(this.rbtnNumero);
             this.Controls.Add(this.tbtnFecha);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "busquedaNomina";
             this.Text = "busquedaNomina";
             this.Load += new System.EventHandler(this.busquedaNomina_Load);

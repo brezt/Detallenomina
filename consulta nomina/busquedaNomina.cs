@@ -20,7 +20,7 @@ namespace consulta_nomina
         private void busquedaNomina_Load(object sender, EventArgs e)
         {
             Operaciones op = new Operaciones();
-            dgvNomina.DataSource = op.ConsultaConResultado("select empleados.idempleado, empleados.nombreempleado, empleados.apellidoempleado, empleados.sueldoempleado, empleados.cedulaempleado, cargo.descricargo, (empleados.sueldoempleado*0.12) ISR, (empleados.sueldoempleado*0.4) SS, (empleados.sueldoempleado*0.02) Ahorros, ((empleados.sueldoempleado*0.012)+(empleados.sueldoempleado*0.012)+(empleados.sueldoempleado*0.04)+(empleados.sueldoempleado*0.02)) 'Total Deducc', ((empleados.sueldoempleado)-((empleados.sueldoempleado*0.12)+(empleados.sueldoempleado*0.04)+(empleados.sueldoempleado*0.02))) 'Sueldo Neto' from empleados inner join cargo on empleados.idcargo=cargo.idcargo");
+            dgvNomina.DataSource = op.ConsultaConResultado("select *from cabecera_nomina ");
 
 
         }
@@ -58,5 +58,27 @@ namespace consulta_nomina
             cn.Show();
         }
 
+        private void dgvNomina_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //dgvDetalleNomina no = new dgvDetalleNomina();
+
+        }
+
+        private void dgvDetalleNomina_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvNomina_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Operaciones op = new Operaciones();
+            DataGridViewRow rellenar = dgvNomina.Rows[e.RowIndex];
+            string numero;
+            numero = rellenar.Cells["codigonomina"].Value.ToString();
+
+            dgvDetalleNomina.DataSource = op.ConsultaConResultado("select detalle_nomina.codnomina, empleados.nombreempleado, detalle_nomina.sueldoempleado, detalle_nomina.isr, detalle_nomina.ss, detalle_nomina.otrosdescuentos, detalle_nomina.neto from detalle_nomina inner join cabecera_nomina on detalle_nomina.codnomina = cabecera_nomina.codigonomina  inner join empleados on empleados.idempleado = detalle_nomina.idempledo");
+
+         
+        }
     }
 }
