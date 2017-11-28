@@ -179,5 +179,23 @@ namespace consulta_nomina
         {
 
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+           /* Operaciones op = new Operaciones();
+           
+
+            if (MessageBox.Show("SEGURO QUE DESEA ELIMINAR ESTE REGISTRO?", "ELIMINAR ", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+
+            {
+                op.ConsultasSinResultados("DELETE FROM cabecera_nomina WHERE codigonomina ='" + txtNumeroNomina.Text + "'");
+                op.ConsultasSinResultados("DELETE FROM Detalle_nomina WHERE codigonomina ='" + txtNumeroNomina.Text + "'");
+            }*/
+        }
     }
 }
