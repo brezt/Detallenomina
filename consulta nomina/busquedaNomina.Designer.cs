@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btncrear = new System.Windows.Forms.Button();
             this.btnimprimir = new System.Windows.Forms.Button();
             this.bntBuscar = new System.Windows.Forms.Button();
             this.txtbuscar = new System.Windows.Forms.TextBox();
@@ -42,25 +41,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleNomina)).BeginInit();
             this.SuspendLayout();
             // 
-            // btncrear
-            // 
-            this.btncrear.Image = global::consulta_nomina.Properties.Resources.icons8_create_50;
-            this.btncrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncrear.Location = new System.Drawing.Point(959, 11);
-            this.btncrear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btncrear.Name = "btncrear";
-            this.btncrear.Size = new System.Drawing.Size(133, 66);
-            this.btncrear.TabIndex = 15;
-            this.btncrear.Text = "Crear";
-            this.btncrear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btncrear.UseVisualStyleBackColor = true;
-            this.btncrear.Click += new System.EventHandler(this.btncrear_Click);
-            // 
             // btnimprimir
             // 
             this.btnimprimir.Image = global::consulta_nomina.Properties.Resources.icons8_print_50;
             this.btnimprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnimprimir.Location = new System.Drawing.Point(1098, 10);
+            this.btnimprimir.Location = new System.Drawing.Point(1004, 12);
             this.btnimprimir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnimprimir.Name = "btnimprimir";
             this.btnimprimir.Size = new System.Drawing.Size(131, 66);
@@ -73,7 +58,7 @@
             // 
             this.bntBuscar.Image = global::consulta_nomina.Properties.Resources.icons8_job_seeker_50;
             this.bntBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntBuscar.Location = new System.Drawing.Point(823, 11);
+            this.bntBuscar.Location = new System.Drawing.Point(868, 12);
             this.bntBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bntBuscar.Name = "bntBuscar";
             this.bntBuscar.Size = new System.Drawing.Size(130, 66);
@@ -85,16 +70,16 @@
             // 
             // txtbuscar
             // 
-            this.txtbuscar.Location = new System.Drawing.Point(395, 33);
+            this.txtbuscar.Location = new System.Drawing.Point(347, 34);
             this.txtbuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(409, 22);
+            this.txtbuscar.Size = new System.Drawing.Size(498, 22);
             this.txtbuscar.TabIndex = 12;
             // 
             // rbtnStatus
             // 
             this.rbtnStatus.AutoSize = true;
-            this.rbtnStatus.Location = new System.Drawing.Point(300, 33);
+            this.rbtnStatus.Location = new System.Drawing.Point(252, 34);
             this.rbtnStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnStatus.Name = "rbtnStatus";
             this.rbtnStatus.Size = new System.Drawing.Size(69, 21);
@@ -106,7 +91,7 @@
             // rbtnNumero
             // 
             this.rbtnNumero.AutoSize = true;
-            this.rbtnNumero.Location = new System.Drawing.Point(193, 33);
+            this.rbtnNumero.Location = new System.Drawing.Point(145, 34);
             this.rbtnNumero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnNumero.Name = "rbtnNumero";
             this.rbtnNumero.Size = new System.Drawing.Size(77, 21);
@@ -118,7 +103,7 @@
             // tbtnFecha
             // 
             this.tbtnFecha.AutoSize = true;
-            this.tbtnFecha.Location = new System.Drawing.Point(80, 34);
+            this.tbtnFecha.Location = new System.Drawing.Point(32, 35);
             this.tbtnFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbtnFecha.Name = "tbtnFecha";
             this.tbtnFecha.Size = new System.Drawing.Size(68, 21);
@@ -134,7 +119,7 @@
             this.dgvNomina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvNomina.Name = "dgvNomina";
             this.dgvNomina.RowTemplate.Height = 24;
-            this.dgvNomina.Size = new System.Drawing.Size(1197, 194);
+            this.dgvNomina.Size = new System.Drawing.Size(1103, 194);
             this.dgvNomina.TabIndex = 16;
             this.dgvNomina.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNomina_CellClick);
             this.dgvNomina.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNomina_CellContentClick);
@@ -147,7 +132,7 @@
             this.dgvDetalleNomina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDetalleNomina.Name = "dgvDetalleNomina";
             this.dgvDetalleNomina.RowTemplate.Height = 24;
-            this.dgvDetalleNomina.Size = new System.Drawing.Size(1197, 194);
+            this.dgvDetalleNomina.Size = new System.Drawing.Size(1103, 194);
             this.dgvDetalleNomina.TabIndex = 17;
             this.dgvDetalleNomina.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleNomina_CellContentClick);
             // 
@@ -168,7 +153,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvDetalleNomina);
             this.Controls.Add(this.dgvNomina);
-            this.Controls.Add(this.btncrear);
             this.Controls.Add(this.btnimprimir);
             this.Controls.Add(this.bntBuscar);
             this.Controls.Add(this.txtbuscar);
@@ -187,8 +171,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btncrear;
         private System.Windows.Forms.Button btnimprimir;
         private System.Windows.Forms.Button bntBuscar;
         private System.Windows.Forms.TextBox txtbuscar;

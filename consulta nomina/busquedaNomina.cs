@@ -25,9 +25,9 @@ namespace consulta_nomina
 
         }
 
-        private void bntBuscar_Click(object sender, EventArgs e)
+        private void bntBuscar_Click(object sender, EventArgs e)//programacion del boton buscar 
         {
-            /* if (rbtnNumero.Checked == true)
+             if (rbtnNumero.Checked == true)
              {
                  Operaciones op = new Operaciones();
                dgvNomina.DataSource = op.ConsultaConResultado("select empleados.idempleado, empleados.nombreempleado, empleados.apellidoempleado, empleados.sueldoempleado, empleados.cedulaempleado, cargo.descricargo, (empleados.sueldoempleado*0.12) ISR, (empleados.sueldoempleado*0.4) SS, (empleados.sueldoempleado*0.02) Ahorros, ((empleados.sueldoempleado*0.012)+(empleados.sueldoempleado*0.012)+(empleados.sueldoempleado*0.04)+(empleados.sueldoempleado*0.02)) 'Total Deducc', ((empleados.sueldoempleado)-((empleados.sueldoempleado*0.12)+(empleados.sueldoempleado*0.04)+(empleados.sueldoempleado*0.02))) 'Sueldo Neto' from empleados inner join cargo on empleados.idcargo like '%" + txtbuscar.Text + "%'");
@@ -44,13 +44,13 @@ namespace consulta_nomina
                  Operaciones op = new Operaciones();
                  dgvNomina.DataSource = op.ConsultaConResultado("select empleados.idempleado, empleados.nombreempleado, empleados.apellidoempleado, empleados.sueldoempleado, empleados.cedulaempleado, cargo.descricargo, (empleados.sueldoempleado*0.12) ISR, (empleados.sueldoempleado*0.4) SS, (empleados.sueldoempleado*0.02) Ahorros, ((empleados.sueldoempleado*0.012)+(empleados.sueldoempleado*0.012)+(empleados.sueldoempleado*0.04)+(empleados.sueldoempleado*0.02)) 'Total Deducc', ((empleados.sueldoempleado)-((empleados.sueldoempleado*0.12)+(empleados.sueldoempleado*0.04)+(empleados.sueldoempleado*0.02))) 'Sueldo Neto' from empleados inner join cargo on empleados.idcargo like '%" + txtbuscar.Text + "%'");
              }
-             */
+             
         }
 
 
    
 
-        private void btncrear_Click(object sender, EventArgs e)
+        private void btncrear_Click(object sender, EventArgs e)//al hacer click llamar al formulario grudnomina 
         {
 
             frmCrudNomina cn = new frmCrudNomina();
@@ -69,7 +69,7 @@ namespace consulta_nomina
 
         }
 
-        private void dgvNomina_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvNomina_CellClick(object sender, DataGridViewCellEventArgs e)//al hacr click llamar detalle nomina 
         {
             Operaciones op = new Operaciones();
             DataGridViewRow rellenar = dgvNomina.Rows[e.RowIndex];

@@ -27,7 +27,7 @@ namespace consulta_nomina
             busqueda();
         }
 
-        public void busqueda() //Fucion para buscar//
+        public void busqueda() //Funcion para buscar//
         {
             Operaciones op = new Operaciones();
             
@@ -106,6 +106,20 @@ namespace consulta_nomina
             emp.txtid.Text = rellenar.Cells["idempleado"].Value.ToString();
 
             emp.Show();
+        }
+
+        private void btnimprimir_Click(object sender, EventArgs e)
+        {
+            Operaciones op = new Operaciones();
+            DataSet ds = new DataSet();
+            DataTable dt = op.ConsultaConResultado("select * from empleados ");
+            ds.Tables.Add(dt);
+            ds.Tables[0].TableName = "empleados";
+            ds.WriteXml(@"C:\\sistemas\\nomina.xml");
+
+            
+            
+            
         }
     }
 }

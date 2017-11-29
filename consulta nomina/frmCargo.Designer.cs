@@ -134,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 254);
+            this.ClientSize = new System.Drawing.Size(557, 241);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btneliminar);
@@ -143,7 +143,7 @@
             this.Controls.Add(this.btncrear);
             this.Controls.Add(this.txtdescriccion);
             this.Controls.Add(this.txtdescripcion);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCargo";
             this.Text = "frmCargo";
             this.Load += new System.EventHandler(this.frmCargo_Load);

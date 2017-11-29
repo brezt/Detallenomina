@@ -116,6 +116,9 @@ namespace consulta_nomina
                 MessageBox.Show("DATOS GUARDADOS");
                 borrar();
             }
+            {
+
+            }
         }
         public void borrar()
         {
@@ -232,7 +235,11 @@ namespace consulta_nomina
             if (MessageBox.Show("SEGURO QUE DECEA MODIFICAR ESTE REGISTRO?", "ACTUALIZAR EMPLEADO", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes) ;
                 Operaciones op = new Operaciones();
             op.ConsultasSinResultados("UPDATE empleados SET sueldoempleado ='" + txtsueldo.Text + "', idcargo = '" + cmbcargo.Text + "', iddepartmento = '" + cmbdepartamento.Text + "', idestado = '" + cmbestado.Text + "', descriempleado = '" + txtdescriccion.Text + "', nombreempleado = '" + txtnombre.Text + "', apellidoempleado = '" + txtapellido.Text + "', cedulaempleado = '" + txtcedula.Text + "', sexoempleado = '" + cmbsexo.Text +"', direccionempleado = '" + txtdireccion.Text + "', telefonoempleado = '" + txttelefono.Text + "', fechanacimiento = '" + txtfechanacimiento.Text + "', fechaingreso = '" + txtfechaingreso.Text + "'WHERE idempleado = '" + txtid.Text + "' ");
+         
+               
         }
+
+                         
 
         private void frmEmpleado_Load(object sender, EventArgs e)
         {

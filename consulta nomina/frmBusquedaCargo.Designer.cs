@@ -34,7 +34,6 @@
             this.rbtnCargo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btncrear = new System.Windows.Forms.Button();
             this.btnimprimir = new System.Windows.Forms.Button();
             this.bntBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcargo)).BeginInit();
@@ -49,7 +48,7 @@
             this.dgvcargo.Location = new System.Drawing.Point(32, 126);
             this.dgvcargo.Margin = new System.Windows.Forms.Padding(4);
             this.dgvcargo.Name = "dgvcargo";
-            this.dgvcargo.Size = new System.Drawing.Size(540, 185);
+            this.dgvcargo.Size = new System.Drawing.Size(421, 185);
             this.dgvcargo.TabIndex = 0;
             this.dgvcargo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcargo_CellContentClick);
             this.dgvcargo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcargo_CellDoubleClick);
@@ -98,29 +97,15 @@
             this.txtBuscar.Location = new System.Drawing.Point(199, 38);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(373, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(254, 22);
             this.txtBuscar.TabIndex = 19;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // btncrear
-            // 
-            this.btncrear.Image = ((System.Drawing.Image)(resources.GetObject("btncrear.Image")));
-            this.btncrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncrear.Location = new System.Drawing.Point(331, 66);
-            this.btncrear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btncrear.Name = "btncrear";
-            this.btncrear.Size = new System.Drawing.Size(113, 54);
-            this.btncrear.TabIndex = 18;
-            this.btncrear.Text = "Crear";
-            this.btncrear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btncrear.UseVisualStyleBackColor = true;
-            this.btncrear.Click += new System.EventHandler(this.btncrear_Click);
             // 
             // btnimprimir
             // 
             this.btnimprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnimprimir.Image")));
             this.btnimprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnimprimir.Location = new System.Drawing.Point(450, 66);
+            this.btnimprimir.Location = new System.Drawing.Point(331, 66);
             this.btnimprimir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnimprimir.Name = "btnimprimir";
             this.btnimprimir.Size = new System.Drawing.Size(122, 54);
@@ -148,9 +133,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 378);
+            this.ClientSize = new System.Drawing.Size(493, 378);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.btncrear);
             this.Controls.Add(this.btnimprimir);
             this.Controls.Add(this.bntBuscar);
             this.Controls.Add(this.groupBox1);
@@ -173,7 +157,6 @@
         private System.Windows.Forms.RadioButton rbtnId;
         private System.Windows.Forms.RadioButton rbtnCargo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btncrear;
         private System.Windows.Forms.Button btnimprimir;
         private System.Windows.Forms.Button bntBuscar;
         private System.Windows.Forms.TextBox txtBuscar;

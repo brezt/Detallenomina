@@ -17,7 +17,7 @@ namespace consulta_nomina
             InitializeComponent();
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        private void txtBuscar_TextChanged(object sender, EventArgs e)//busqueda en departamento
         {
             if (rbtnCargo.Checked == true)
             {
@@ -52,7 +52,7 @@ namespace consulta_nomina
         {
 
         }
-
+        //llamar a formulario frmdepartamento en el boton crear 
         private void btncrear_Click(object sender, EventArgs e)
         {
             frmDepartamento dp = new frmDepartamento();

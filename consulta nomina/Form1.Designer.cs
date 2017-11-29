@@ -36,7 +36,6 @@
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.bntBuscar = new System.Windows.Forms.Button();
             this.btnimprimir = new System.Windows.Forms.Button();
-            this.btncrear = new System.Windows.Forms.Button();
             this.dgvempleado = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvempleado)).BeginInit();
             this.SuspendLayout();
@@ -89,7 +88,7 @@
             // 
             this.txtbuscar.Location = new System.Drawing.Point(435, 60);
             this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(409, 22);
+            this.txtbuscar.Size = new System.Drawing.Size(515, 22);
             this.txtbuscar.TabIndex = 4;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
@@ -97,7 +96,7 @@
             // 
             this.bntBuscar.Image = ((System.Drawing.Image)(resources.GetObject("bntBuscar.Image")));
             this.bntBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntBuscar.Location = new System.Drawing.Point(850, 38);
+            this.bntBuscar.Location = new System.Drawing.Point(970, 37);
             this.bntBuscar.Name = "bntBuscar";
             this.bntBuscar.Size = new System.Drawing.Size(125, 66);
             this.bntBuscar.TabIndex = 5;
@@ -117,19 +116,7 @@
             this.btnimprimir.Text = "Imprimir";
             this.btnimprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnimprimir.UseVisualStyleBackColor = true;
-            // 
-            // btncrear
-            // 
-            this.btncrear.Image = ((System.Drawing.Image)(resources.GetObject("btncrear.Image")));
-            this.btncrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncrear.Location = new System.Drawing.Point(981, 38);
-            this.btncrear.Name = "btncrear";
-            this.btncrear.Size = new System.Drawing.Size(114, 66);
-            this.btncrear.TabIndex = 7;
-            this.btncrear.Text = "Crear";
-            this.btncrear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btncrear.UseVisualStyleBackColor = true;
-            this.btncrear.Click += new System.EventHandler(this.btncrear_Click);
+            this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
             // 
             // dgvempleado
             // 
@@ -150,7 +137,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1236, 612);
             this.Controls.Add(this.dgvempleado);
-            this.Controls.Add(this.btncrear);
             this.Controls.Add(this.btnimprimir);
             this.Controls.Add(this.bntBuscar);
             this.Controls.Add(this.txtbuscar);
@@ -176,7 +162,6 @@
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Button bntBuscar;
         private System.Windows.Forms.Button btnimprimir;
-        private System.Windows.Forms.Button btncrear;
         private System.Windows.Forms.DataGridView dgvempleado;
     }
 }

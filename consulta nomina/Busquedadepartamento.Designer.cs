@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btncrear = new System.Windows.Forms.Button();
             this.btnimprimir = new System.Windows.Forms.Button();
             this.bntBuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -42,32 +41,18 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(180, 37);
+            this.txtBuscar.Location = new System.Drawing.Point(180, 46);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(389, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(272, 22);
             this.txtBuscar.TabIndex = 25;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // btncrear
-            // 
-            this.btncrear.Image = global::consulta_nomina.Properties.Resources.icons8_create_50;
-            this.btncrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncrear.Location = new System.Drawing.Point(313, 72);
-            this.btncrear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btncrear.Name = "btncrear";
-            this.btncrear.Size = new System.Drawing.Size(124, 54);
-            this.btncrear.TabIndex = 24;
-            this.btncrear.Text = "Crear";
-            this.btncrear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btncrear.UseVisualStyleBackColor = true;
-            this.btncrear.Click += new System.EventHandler(this.btncrear_Click);
             // 
             // btnimprimir
             // 
             this.btnimprimir.Image = global::consulta_nomina.Properties.Resources.icons8_print_50;
             this.btnimprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnimprimir.Location = new System.Drawing.Point(443, 72);
+            this.btnimprimir.Location = new System.Drawing.Point(326, 81);
             this.btnimprimir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnimprimir.Name = "btnimprimir";
             this.btnimprimir.Size = new System.Drawing.Size(126, 54);
@@ -80,7 +65,7 @@
             // 
             this.bntBuscar.Image = global::consulta_nomina.Properties.Resources.icons8_job_seeker_50;
             this.bntBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntBuscar.Location = new System.Drawing.Point(180, 72);
+            this.bntBuscar.Location = new System.Drawing.Point(180, 81);
             this.bntBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bntBuscar.Name = "bntBuscar";
             this.bntBuscar.Size = new System.Drawing.Size(127, 54);
@@ -135,7 +120,7 @@
             this.dgvdepartamento.Location = new System.Drawing.Point(13, 153);
             this.dgvdepartamento.Margin = new System.Windows.Forms.Padding(4);
             this.dgvdepartamento.Name = "dgvdepartamento";
-            this.dgvdepartamento.Size = new System.Drawing.Size(556, 229);
+            this.dgvdepartamento.Size = new System.Drawing.Size(439, 229);
             this.dgvdepartamento.TabIndex = 20;
             this.dgvdepartamento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdepartamento_CellContentClick);
             // 
@@ -143,9 +128,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 436);
+            this.ClientSize = new System.Drawing.Size(499, 436);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.btncrear);
             this.Controls.Add(this.btnimprimir);
             this.Controls.Add(this.bntBuscar);
             this.Controls.Add(this.groupBox1);
@@ -163,7 +147,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button btncrear;
         private System.Windows.Forms.Button btnimprimir;
         private System.Windows.Forms.Button bntBuscar;
         private System.Windows.Forms.GroupBox groupBox1;

@@ -26,6 +26,7 @@ namespace consulta_nomina
 
 
             }
+            //Conexion a la Base de Datos//
             else
             {
                 Operaciones op = new Operaciones();

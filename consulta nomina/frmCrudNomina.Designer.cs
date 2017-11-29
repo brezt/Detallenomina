@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrudNomina));
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -155,12 +156,15 @@
             // 
             // btnGenerarNomina
             // 
-            this.btnGenerarNomina.Location = new System.Drawing.Point(916, 25);
+            this.btnGenerarNomina.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerarNomina.Image")));
+            this.btnGenerarNomina.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerarNomina.Location = new System.Drawing.Point(906, 25);
             this.btnGenerarNomina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerarNomina.Name = "btnGenerarNomina";
-            this.btnGenerarNomina.Size = new System.Drawing.Size(147, 23);
+            this.btnGenerarNomina.Size = new System.Drawing.Size(189, 60);
             this.btnGenerarNomina.TabIndex = 0;
             this.btnGenerarNomina.Text = "Generar Nómina";
+            this.btnGenerarNomina.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGenerarNomina.UseVisualStyleBackColor = true;
             this.btnGenerarNomina.Click += new System.EventHandler(this.btnGenerarNomina_Click);
             // 
@@ -178,23 +182,29 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(175, 460);
+            this.btnGuardar.Image = global::consulta_nomina.Properties.Resources.icons8_save_50;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(165, 461);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(147, 57);
+            this.btnGuardar.Size = new System.Drawing.Size(128, 57);
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(341, 460);
+            this.btnBorrar.Image = global::consulta_nomina.Properties.Resources.icons8_cancel_50;
+            this.btnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBorrar.Location = new System.Drawing.Point(299, 461);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(147, 57);
+            this.btnBorrar.Size = new System.Drawing.Size(130, 57);
             this.btnBorrar.TabIndex = 9;
             this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
@@ -212,7 +222,6 @@
             this.txtTotalDeducciones.Location = new System.Drawing.Point(661, 478);
             this.txtTotalDeducciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotalDeducciones.Name = "txtTotalDeducciones";
-            this.txtTotalDeducciones.ReadOnly = true;
             this.txtTotalDeducciones.Size = new System.Drawing.Size(145, 22);
             this.txtTotalDeducciones.TabIndex = 10;
             this.txtTotalDeducciones.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -222,7 +231,6 @@
             this.txtTotalNomina.Location = new System.Drawing.Point(932, 478);
             this.txtTotalNomina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotalNomina.Name = "txtTotalNomina";
-            this.txtTotalNomina.ReadOnly = true;
             this.txtTotalNomina.Size = new System.Drawing.Size(145, 22);
             this.txtTotalNomina.TabIndex = 12;
             this.txtTotalNomina.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -243,12 +251,15 @@
             // btnCrear
             // 
             this.btnCrear.Enabled = false;
-            this.btnCrear.Location = new System.Drawing.Point(12, 460);
+            this.btnCrear.Image = global::consulta_nomina.Properties.Resources.icons8_create_50;
+            this.btnCrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrear.Location = new System.Drawing.Point(31, 460);
             this.btnCrear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(147, 57);
+            this.btnCrear.Size = new System.Drawing.Size(128, 57);
             this.btnCrear.TabIndex = 13;
             this.btnCrear.Text = "Crear";
+            this.btnCrear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCrear.UseVisualStyleBackColor = true;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
