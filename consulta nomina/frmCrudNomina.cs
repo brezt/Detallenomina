@@ -71,7 +71,7 @@ namespace consulta_nomina
             busquedaNomina bn = new busquedaNomina();
             generaNomina();
 
-            
+            calculos();
 
 
         }
@@ -82,6 +82,8 @@ namespace consulta_nomina
                  float isrTotal = 0;
             float ssTotal = 0;
             float otrosTotal = 0;
+            float netosueldo =0;
+            int numeroNomina=0;
            
             
 
@@ -93,14 +95,22 @@ namespace consulta_nomina
                 isrTotal+= float.Parse(dgvDetalleNomina.Rows[a].Cells["ISR"].Value.ToString());
                 ssTotal+= float.Parse(dgvDetalleNomina.Rows[a].Cells["SS"].Value.ToString());
                 otrosTotal+= float.Parse(dgvDetalleNomina.Rows[a].Cells["Ahorros"].Value.ToString());
-               
+                netosueldo = float.Parse(dgvDetalleNomina.Rows[a].Cells["Sueldo Neto"].Value.ToString());
+                numeroNomina = Convert.ToInt32( txtNumeroNomina.Text);
+
 
             }
-            Operaciones op = new Operaciones();
-           op.ConsultasSinResultados("insert into cabecera_nomina (codigonomina, fechainicio, fechafin, sueldototal, isrtotal, sstotal, otrosdescuentos, deduciontotal, netotal, nominafecha, status, tipo) values ('"+txtNumeroNomina.Text+"', '"+txtDesde.Text+"', '"+txtHasta.Text+"', '"+txtTotalNomina.Text+"', '"+isrTotal+"', '"+ssTotal+"', '"+otrosTotal+"','"+txtTotalDeducciones.Text+"', '"+neto+"','10/11/2013', '"+cmbStatus.Text+"', '"+cmbTipo.Text+"')");
 
             txtTotalDeducciones.Text = totalDeducciones.ToString();
             txtTotalNomina.Text = totalNomina.ToString();
+
+            float totaldedu = float.Parse(txtTotalDeducciones.Text);
+            float totalNom = float.Parse(txtTotalNomina.Text);
+            Operaciones op = new Operaciones();
+
+           op.ConsultasSinResultados("insert into cabecera_nomina (codigonomina, fechainicio, fechafin, sueldototal, isrtotal, sstotal, otrosdescuentos, deduciontotal, netotal, nominafecha, status, tipo) values ('"+numeroNomina+"', '"+txtDesde.Text+"', '"+txtHasta.Text+"', '"+totalNom +"', '"+isrTotal+"', '"+ssTotal+"', '"+otrosTotal+"','"+totaldedu+"', '"+netosueldo+"','10/11/2013', '"+cmbStatus.Text+"', '"+cmbTipo.Text+"')");
+
+            
         }
 
         public bool valida()

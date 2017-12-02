@@ -112,14 +112,80 @@ namespace consulta_nomina
         {
             Operaciones op = new Operaciones();
             DataSet ds = new DataSet();
-            DataTable dt = op.ConsultaConResultado("select * from empleados ");
-            ds.Tables.Add(dt);
-            ds.Tables[0].TableName = "empleados";
-            ds.WriteXml(@"C:\\sistemas\\nomina.xml");
+            /////////////////////////////////////////////////////////////////////
+            //este funciona bien 
+             //Operaciones op = new Operaciones();
+            // DataSet ds = new DataSet();
+             DataTable dt = op.ConsultaConResultado("select * from empleados ");
+             ds.Tables.Add(dt);
+             ds.Tables[0].TableName = "empleados";
+             ds.WriteXml(@"C:\\sistemas\\nomina.xml");
 
+             frmReporteEmpleado re = new frmReporteEmpleado();
+             re.Show();
             
-            
-            
+            /*
+            if (rbtnid.Checked == true)
+            {
+                DataTable dt =  op.ConsultaConResultado("select * from empleados where idempleado like'%" + txtbuscar.Text.Trim() + "%'");
+                
+                ds.Tables.Add(dt);
+                ds.Tables[0].TableName = "empleados";
+                ds.WriteXml(@"C:\sistemas\xmlNomina\empleadonomina.xml");
+
+                frmReporteEmpleado re = new frmReporteEmpleado();
+                re.Show();
+            }
+
+           else  if (rbtnnombre.Checked == true)
+            {
+                DataTable dt = op.ConsultaConResultado("select * from empleados where nombreempleado like'%" + txtbuscar.Text.Trim() + "%'");
+
+                ds.Tables.Add(dt);
+                ds.Tables[0].TableName = "empleados";
+                ds.WriteXml(@"C:\sistemas\xmlNomina\empleadonomina.xml");
+
+                frmReporteEmpleado re = new frmReporteEmpleado();
+                re.Show();
+            }
+
+           else  if (rbtnapellido.Checked == true)
+            {
+                DataTable dt = op.ConsultaConResultado("select * from empleados where apellidoempleado like'%" + txtbuscar.Text.Trim() + "%'");
+                ds.Tables.Add(dt);
+                ds.Tables[0].TableName = "empleados";
+                ds.WriteXml(@"C:\sistemas\xmlNomina\empleadonomina.xml");
+
+                frmReporteEmpleado re = new frmReporteEmpleado();
+                re.Show();
+            }
+
+
+            else if (rbtncedula.Checked == true)
+            {
+                DataTable dt= op.ConsultaConResultado("select * from empleados where cedulaempleado like'%" + txtbuscar.Text.Trim() + "%'");
+                ds.Tables.Add(dt);
+                ds.Tables[0].TableName = "empleados";
+                ds.WriteXml(@"C:\sistemas\xmlNomina\empleadonomina.xml");
+
+                frmReporteEmpleado re = new frmReporteEmpleado();
+                re.Show();
+            }
+
+            else if (txtbuscar.Text.Length == 0)
+            {
+                DataTable dt = op.ConsultaConResultado("select * from empleados");
+                ds.Tables.Add(dt);
+                ds.Tables[0].TableName = "empleados";
+                ds.WriteXml(@"C:\sistemas\xmlNomina\empleadonomina.xml");
+
+                frmReporteEmpleado re = new frmReporteEmpleado();
+                re.Show();
+            }
+
+    */
+
+
         }
     }
 }
