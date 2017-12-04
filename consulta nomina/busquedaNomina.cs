@@ -73,8 +73,8 @@ namespace consulta_nomina
         {
             Operaciones op = new Operaciones();
             DataGridViewRow rellenar = dgvNomina.Rows[e.RowIndex];
-            string numero;
-            numero = rellenar.Cells["codigonomina"].Value.ToString();
+            int numero;
+            numero = Convert.ToInt32( rellenar.Cells["codigonomina"].Value.ToString());
 
             dgvDetalleNomina.DataSource = op.ConsultaConResultado("select detalle_nomina.codnomina, empleados.nombreempleado, detalle_nomina.sueldoempleado, detalle_nomina.isr, detalle_nomina.ss, detalle_nomina.otrosdescuentos, detalle_nomina.neto from detalle_nomina inner join cabecera_nomina on detalle_nomina.codnomina = cabecera_nomina.codigonomina  inner join empleados on empleados.idempleado = detalle_nomina.idempledo");
 
@@ -117,6 +117,26 @@ namespace consulta_nomina
                 cn.calculos(); //para que haga los calculos de la nomina y lo entre a los textbox
 
                 cn.Show();
+            }
+        }
+
+        private void btnimprimir_Click(object sender, EventArgs e)
+        {
+            Operaciones op = new Operaciones();
+            DataSet ds = new DataSet();
+
+
+            
+            {
+                DataTable dt = op.ConsultaConResultado("select * from cabecera_nomina where codigonomina like'%" + txtbuscar.Text.Trim() + "%'");
+
+                ds.Tables.Add(dt);
+                ds.Tables[0].TableName = "cabecera_nomina";
+                ds.WriteXml(@"C:\sistemas\cabecera_nomina.xml");
+
+                frmdetallenomina dn = new frmdetallenomina();
+                dn.Show();
+                
             }
         }
     }

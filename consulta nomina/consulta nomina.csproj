@@ -149,6 +149,12 @@
     <Compile Include="frmCrudNomina.Designer.cs">
       <DependentUpon>frmCrudNomina.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmdetallenomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdetallenomina.Designer.cs">
+      <DependentUpon>frmdetallenomina.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReporteEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>reporteEmpleados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="reportenomina.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportenomina.rpt</DependentUpon>
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
@@ -192,6 +205,9 @@
     <EmbeddedResource Include="frmCrudNomina.resx">
       <DependentUpon>frmCrudNomina.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmdetallenomina.resx">
+      <DependentUpon>frmdetallenomina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReporteEmpleado.resx">
       <DependentUpon>frmReporteEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +224,11 @@
     <EmbeddedResource Include="reporteEmpleados.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reporteEmpleados.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportenomina.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportenomina.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="packages.config" />

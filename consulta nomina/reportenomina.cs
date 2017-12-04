@@ -16,14 +16,14 @@ namespace consulta_nomina {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class reporteEmpleados : ReportClass {
+    public class reportenomina : ReportClass {
         
-        public reporteEmpleados() {
+        public reportenomina() {
         }
         
         public override string ResourceName {
             get {
-                return "reporteEmpleados.rpt";
+                return "reportenomina.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace consulta_nomina {
         
         public override string FullResourceName {
             get {
-                return "consulta_nomina.reporteEmpleados.rpt";
+                return "consulta_nomina.reportenomina.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace consulta_nomina {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedreporteEmpleados : Component, ICachedReport {
+    public class Cachedreportenomina : Component, ICachedReport {
         
-        public CachedreporteEmpleados() {
+        public Cachedreportenomina() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace consulta_nomina {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            reporteEmpleados rpt = new reporteEmpleados();
+            reportenomina rpt = new reportenomina();
             rpt.Site = this.Site;
             return rpt;
         }

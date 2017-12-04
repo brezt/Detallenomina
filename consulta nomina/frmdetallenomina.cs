@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace consulta_nomina
 {
-    public partial class frmReporteEmpleado : Form
+    public partial class frmdetallenomina : Form
     {
-        public frmReporteEmpleado()
+        public frmdetallenomina()
         {
             InitializeComponent();
-        }
-
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace consulta_nomina
 {
-    partial class frmReporteEmpleado
+    partial class frmdetallenomina
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.reporteEmpleados1 = new consulta_nomina.reporteEmpleados();
+            this.reportenomina1 = new consulta_nomina.reportenomina();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -40,19 +40,18 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.reporteEmpleados1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(972, 535);
+            this.crystalReportViewer1.ReportSource = this.reportenomina1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1169, 556);
             this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.ParameterPanel;
             // 
-            // frmReporteEmpleado
+            // frmdetallenomina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 535);
+            this.ClientSize = new System.Drawing.Size(1169, 556);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "frmReporteEmpleado";
-            this.Text = "frmReporteEmpleado";
+            this.Name = "frmdetallenomina";
+            this.Text = "frmdetallenomina";
             this.ResumeLayout(false);
 
         }
@@ -60,6 +59,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private reporteEmpleados reporteEmpleados1;
+        private reportenomina reportenomina1;
     }
 }

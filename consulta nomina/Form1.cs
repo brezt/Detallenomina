@@ -112,26 +112,15 @@ namespace consulta_nomina
         {
             Operaciones op = new Operaciones();
             DataSet ds = new DataSet();
-            /////////////////////////////////////////////////////////////////////
-            //este funciona bien 
-             //Operaciones op = new Operaciones();
-            // DataSet ds = new DataSet();
-             DataTable dt = op.ConsultaConResultado("select * from empleados ");
-             ds.Tables.Add(dt);
-             ds.Tables[0].TableName = "empleados";
-             ds.WriteXml(@"C:\\sistemas\\nomina.xml");
-
-             frmReporteEmpleado re = new frmReporteEmpleado();
-             re.Show();
             
-            /*
+            
             if (rbtnid.Checked == true)
             {
                 DataTable dt =  op.ConsultaConResultado("select * from empleados where idempleado like'%" + txtbuscar.Text.Trim() + "%'");
                 
                 ds.Tables.Add(dt);
                 ds.Tables[0].TableName = "empleados";
-                ds.WriteXml(@"C:\sistemas\xmlNomina\empleadonomina.xml");
+                ds.WriteXml(@"C:\sistemas\nomina.xml");
 
                 frmReporteEmpleado re = new frmReporteEmpleado();
                 re.Show();
@@ -183,7 +172,7 @@ namespace consulta_nomina
                 re.Show();
             }
 
-    */
+    
 
 
         }
